@@ -1,32 +1,46 @@
-    * {
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    }
-    
-    body {
-        background-color: white !important;
-    }
-    
-    h1,
-    p {
-        color: white;
-        text-decoration: white;
-    }
-    
-    .container {
-        width: fit-content;
-        height: fit-content;
-        display: flex;
-        border-radius: 10px;
-        margin: 100px 230px 0px 250px;
-    }
-    
-    .box {
-        width: 300px;
-        height: 400px;
-        position: relative;
-    }
-    
-    .picture {
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+* {
+    font-family: 'Big Shoulders Display', cursive;
+}
+
+body {
+    background-color: hsl(0, 0%, 95%);
+    font-size: 15px;
+}
+
+h1 {
+    color: hsl(0, 0%, 95%);
+    font-family: 'Big Shoulders Display', cursive;
+}
+
+p {
+    color: hsl(0, 0%, 100%, 0.75);
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+.container {
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    margin: 100px 150px;
+}
+
+.box {
+    width: 300px;
+    height: 400px;
+    position: relative;
+}
+
+.corner-desk-l {
+    border-radius: 10px 0px 0px 10px;
+}
+
+.corner-desk-r {
+    border-radius: 0px 10px 10px 0px;
+}
+
+
+/* .picture-component {
         position: relative;
         border-radius: 100%;
         border: none;
@@ -35,29 +49,59 @@
         padding: 10px;
     }
     
-    .content {
-        margin: 50px;
+    .picture {
+        position: relative;
+        margin-right: -50%;
     }
-    
-    .sedans {
-        background-color: rgb(228, 105, 4);
+     */
+
+.content {
+    margin: 50px;
+}
+
+.sedans {
+    background-color: hsl(31, 77%, 52%);
+}
+
+.suvs {
+    background-color: hsl(184, 100%, 22%);
+}
+
+.luxury {
+    background-color: hsl(179, 100%, 13%);
+}
+
+button {
+    width: 130px;
+    font-family: 'Lexend Deca', sans-serif;
+    height: 40px;
+    position: absolute;
+    margin-top: 40px;
+    border: none;
+    border-radius: 20px;
+    background-color: hsl(0, 0%, 95%);
+    color: rgb(9, 73, 68);
+}
+
+button:active,
+button:hover {
+    border: 2px solid hsl(0, 0%, 95%);
+    color: hsl(0, 0%, 95%);
+    background-color: transparent;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 375px) {
+    .container {
+        margin: 20px;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
     }
-    
-    .suvs {
-        background-color: rgb(27, 107, 100);
+    .corner-desk-l {
+        border-radius: 10px 10px 0px 0px;
     }
-    
-    .luxury {
-        background-color: rgb(9, 73, 68);
+    .corner-desk-r {
+        border-radius: 0px 0px 10px 10px;
     }
-    
-    button {
-        width: 130px;
-        height: 40px;
-        position: absolute;
-        margin-top: 40px;
-        border: none;
-        border-radius: 20px;
-        background-color: rgb(253, 255, 254);
-        color: rgb(9, 73, 68);
-    }
+}
